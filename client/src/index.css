@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root { height: 100%; }
+body { @apply bg-mist font-sans text-ink antialiased; }
+
+@layer components {
+  .btn { @apply inline-flex items-center justify-center gap-2 rounded-md px-3.5 py-2 text-sm font-medium transition-colors disabled:cursor-not-allowed disabled:opacity-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cobalt; }
+  .btn-primary { @apply btn bg-cobalt text-white hover:bg-cobalt-dark; }
+  .btn-ghost { @apply btn border border-line bg-white text-ink hover:bg-mist; }
+  .btn-danger { @apply btn border border-danger/40 bg-white text-danger hover:bg-danger/5; }
+  .btn-sm { @apply px-2.5 py-1 text-xs; }
+  .input { @apply w-full rounded-md border border-line bg-white px-3 py-2 text-sm outline-none focus:border-cobalt focus:ring-2 focus:ring-cobalt/20; }
+  .label { @apply mb-1 block text-sm font-medium; }
+}
+
+/* Remote cursors (per-client rules are injected by CodeEditor) */
+.yRemoteSelection { opacity: 0.35; }
+.yRemoteSelectionHead { position: absolute; height: 100%; box-sizing: border-box; }
+
+.prose-chat p { margin: 0 0 0.5rem; }
+.prose-chat ul { list-style: disc; padding-left: 1.2rem; margin: 0 0 0.5rem; }
+.prose-chat ol { list-style: decimal; padding-left: 1.2rem; margin: 0 0 0.5rem; }
+.prose-chat code:not(pre code) { @apply rounded bg-mist px-1 font-mono text-[0.85em]; }
+.prose-chat pre { margin: 0; overflow-x: auto; }
+.prose-chat pre code { font-family: 'JetBrains Mono', monospace; font-size: 12px; }
+
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
