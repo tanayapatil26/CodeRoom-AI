@@ -66,7 +66,7 @@ CodeRoom AI lets developers create shared coding rooms, edit files together, com
 
 ```bash
 git clone https://github.com/tanayapatil26/CodeRoom-AI.git
-cd coderoom-ai
+cd CodeRoom-AI
 ```
 
 ### 2. Configure the backend
